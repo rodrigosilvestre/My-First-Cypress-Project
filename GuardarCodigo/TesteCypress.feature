@@ -18,3 +18,13 @@ Feature: Organizar itens na lista TO DO
    #Regra: É possível excluir itens da lista TO DO
    #Regra: É possível editar a descrição de itens da lista TO DO
    #Regra: É possível marcar como completo um item da lista
+
+
+   Scenario Outline: Alterar a descrição de um item da minha lista TO DO
+      Given que exista um item na lista TO DO
+      When tento alterar um "<item>"
+      Then o item "<resultado>"      
+      Examples:
+         | novo item                 | resultado        | 
+         | Não fazer o projeto final | não é adicionado | 
+         | Fazer projeto final       | é adicionado     |
