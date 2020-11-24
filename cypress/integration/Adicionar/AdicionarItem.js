@@ -25,7 +25,7 @@ When('verifico se os campos obrigatorios foram preenchidos', () => {
 
 
 Then('clico no botão salvar', () => {
-	cy.get('button[id="oc-datagrid-controls-save-TestGrid"]').click() // Clicando no botão "Save"
+	cy.get('button[id="oc-datagrid-controls-save-TestGrid"]').click() // Clicando no botão "Savee"
 });
 
 Then('valida se o item foi inserido corretamente na tabela {string} {string} {string} {string} {string} {string}', (nome, preço, estoque, país, moeda ,dataDeModificação) => {
