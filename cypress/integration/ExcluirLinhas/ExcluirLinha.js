@@ -4,10 +4,11 @@ Given('que haja pelo menos um elemento na lista', () => {
     .should('exist'); //Veficiando se ha pelo menos um elemento na tabela
 });
 
-When('eu seleciono os itens que eu quero excluir {string} {string} {string}', (indiceExclusao, indiceExclusao2, indiceExclusao3) => {
-    cy.xpath('//*[@id="oc-datagrid-TestGrid"]/div[2]/div/div[1]/div[3]/div['+indiceExclusao+']/div').click(); //Exclui o item de indice 1
-    cy.xpath('//*[@id="oc-datagrid-TestGrid"]/div[2]/div/div[1]/div[3]/div['+indiceExclusao2+']/div').click(); //Exclui o item de indice 2
-    cy.xpath('//*[@id="oc-datagrid-TestGrid"]/div[2]/div/div[1]/div[3]/div['+indiceExclusao3+']/div').click(); //Exclui o item de indice 12
+When('eu seleciono os itens que eu quero excluir {string} {string} {string}', (indiceExclusao1, indiceExclusao2, indiceExclusao3) => {
+    cy.get('body').type('{ctrl}', {release: false}) //Simulando ctrl + click
+    cy.xpath('//*[@id="oc-datagrid-TestGrid"]/div[2]/div/div[1]/div[3]/div['+indiceExclusao1+']/div').click(); //Seleciona o item de indice 1
+    cy.xpath('//*[@id="oc-datagrid-TestGrid"]/div[2]/div/div[1]/div[3]/div['+indiceExclusao2+']/div').click(); //Seleciona o item de indice 2
+    cy.xpath('//*[@id="oc-datagrid-TestGrid"]/div[2]/div/div[1]/div[3]/div['+indiceExclusao3+']/div').click(); //Seleciona o item de indice 12
 });
 
 Then('aperto no botão de excluir', () => {

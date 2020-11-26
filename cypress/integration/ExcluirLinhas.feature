@@ -1,5 +1,5 @@
 #language: en
-Feature: Modificar itens da lista do banco de dados
+Feature: Excluir itens da lista do banco de dados
    COMO organizador do banco de dados
    DESEJO excluir um iten da minha lista
    PARA que que eu possa retirar um elemento do meu banco de dados
@@ -13,8 +13,8 @@ Feature: Modificar itens da lista do banco de dados
 
    Scenario Outline: Excluir uma linha da lista de itens do banco de dados
    Given que haja pelo menos um elemento na lista
-   When eu seleciono os itens que eu quero excluir "<indiceExclusao>" "<indiceExclusao2>" "<indiceExclusao3>"
+   When eu seleciono os itens que eu quero excluir "<indiceExclusao1>" "<indiceExclusao2>" "<indiceExclusao3>"
    Then aperto no botão de excluir
    Examples:
-       | indiceExclusao | indiceExclusao2 | indiceExclusao3 |
-       |   1            | 2               | 12              |
+       | indiceExclusao1 | indiceExclusao2 | indiceExclusao3 |
+       | 1               | 2               | 12              |
