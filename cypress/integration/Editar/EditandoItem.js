@@ -1,5 +1,5 @@
 Given('que exista item na lista do banco de dados', () => {
-    cy.visit("https://opuscapita.github.io/react-grid/#/default"); // Entrando no site
+    cy.visit("/"); // Entrando no site
     cy.get('[class="fixedDataTableRowLayout_main public_fixedDataTableRow_main public_fixedDataTableRow_even oc-datagrid-row public_fixedDataTable_bodyRow"]')
     .should('exist'); // Veficiando se ha pelo menos um elemento na tabela
 });

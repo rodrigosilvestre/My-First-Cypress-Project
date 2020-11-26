@@ -1,10 +1,10 @@
 Given('item sem preço', () => {
-	cy.visit("https://opuscapita.github.io/react-grid/#/default"); //Entrando no site
+	cy.visit("/"); //Entrando no site
     cy.get('button[id="oc-datagrid-controls-create-TestGrid"]').click(); //Clicando no botão de adicionar
 });
 
-When('é requisitada a inserção das descrições {string} do item', (nome) => {
-    cy.get('input[id="ocDatagridCreateInput-TestGrid-nome-0"]').type(nome); //Digitando o preço do elemento
+When('é requisitada a inserção das descrições nome {string} do item', (nome) => {
+    cy.get('[id="ocDatagridCell-TestGrid-name-0"]').type(nome); //Digitando o preço do elemento
 });
 
 Then('clico no botão salvar', () => {

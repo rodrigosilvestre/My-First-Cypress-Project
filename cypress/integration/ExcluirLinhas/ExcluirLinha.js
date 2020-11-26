@@ -1,5 +1,5 @@
 Given('que haja pelo menos um elemento na lista', () => {
-	cy.visit("https://opuscapita.github.io/react-grid/#/default"); //Entrado na pagina
+	cy.visit("/"); //Entrado na pagina
     cy.get('[class="fixedDataTableRowLayout_main public_fixedDataTableRow_main public_fixedDataTableRow_even oc-datagrid-row public_fixedDataTable_bodyRow"]')
     .should('exist'); //Veficiando se ha pelo menos um elemento na tabela
 });

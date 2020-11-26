@@ -7,7 +7,7 @@ Feature: tentar adcionar itens incompletos e buscar mensagem de error
    #Regra: É possivel adicionar itens na tabela
    Scenario Outline: Adicionando um elemento sem nome na lista
    Given item sem nome
-   When é requisitada a inserção das descrições "<preço>" do item
+   When é requisitada a inserção das descrições preco "<preço>" do item
    Then clico no botão salvar
    And validar se a mensagem de error apareceu em cima do campo de nome
    Examples:
@@ -17,7 +17,7 @@ Feature: tentar adcionar itens incompletos e buscar mensagem de error
    #Regra: É possivel adicionar itens na tabela
    Scenario Outline: Adicionando um elemento sem preço na lista
    Given item sem preço
-   When é requisitada a inserção das descrições "<nome>" do item
+   When é requisitada a inserção das descrições nome "<nome>" do item
    Then clico no botão salvar
    And validar se a mensagem de error apareceu em cima do campo de valor
    Examples:

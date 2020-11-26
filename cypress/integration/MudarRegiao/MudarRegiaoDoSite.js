@@ -1,5 +1,5 @@
 Given('dentro do site', () => {
-    cy.visit("https://opuscapita.github.io/react-grid/#/default"); //Entrando no site
+    cy.visit("/"); //Entrando no site
 });
 
 When('escolho um idioma {string}', (idioma) => {

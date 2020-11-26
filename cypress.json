@@ -1,2 +1,3 @@
-{"chromeWebSecurity": false
+{"chromeWebSecurity": false,
+"baseUrl": "https://opuscapita.github.io/react-grid/#/default"
 }

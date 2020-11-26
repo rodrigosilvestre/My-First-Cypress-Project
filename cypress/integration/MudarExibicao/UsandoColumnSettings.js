@@ -1,5 +1,5 @@
 Given('que eu esteja dentro do site', () => {
-	cy.visit("https://opuscapita.github.io/react-grid/#/default"); //Entrando no site
+	cy.visit("/"); //Entrando no site
 });
 
 When('clico no menu filtro de exibiçao', () => {

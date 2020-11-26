@@ -1,5 +1,5 @@
 Given('item valido', () => {
-	cy.visit("https://opuscapita.github.io/react-grid/#/default"); //Entrando no site
+	cy.visit("/"); //Entrando no site
     cy.get('button[id="oc-datagrid-controls-create-TestGrid"]').click(); //Clicando no botão de adicionar
 });
 
