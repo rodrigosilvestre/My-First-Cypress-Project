@@ -10,6 +10,7 @@ Feature: CRUD Plus
    #Regra: É nescessario que o item adicionado tenha um nome
    #Regra: É nescessario que o item adicionado tenha um valor
    #Regra: Validação do item adicionado na tabela
+   @Testes-Adicionar
    Scenario Outline: Adicionando um elemento na lista
    Given dentro do site
    And clico no botão Add
@@ -29,6 +30,7 @@ Feature: CRUD Plus
    #Regra: É nescessario que o item adicionado tenha um nome
    #Regra: É nescessario que o item adicionado tenha um valor
    #Regra: Validação do item adicionado na tabela
+   @Testes-Adicionar @Testes-Remover
    Scenario Outline: Adicionando um elemento na lista, e logo após remover o elemento adicionado da lista
    Given dentro do site
    And clico no botão Add
@@ -44,6 +46,7 @@ Feature: CRUD Plus
 
 
     #Regra: É possivel adicionar itens na tabela
+    @Testes-Adicionar
     Scenario Outline: Adicionando um elemento sem nome na lista e buscando pela mensagem de error
     Given dentro do site
     And clico no botão Add
@@ -57,6 +60,7 @@ Feature: CRUD Plus
 
 
     #Regra: É possivel adicionar itens na tabela
+    @Testes-Adicionar
     Scenario Outline: Adicionando um elemento sem preço na lista e buscando pela mensagem de error
     Given dentro do site
     And clico no botão Add
@@ -71,6 +75,7 @@ Feature: CRUD Plus
 
     #Regra: É preciso que o usuario possa usar a ferramenta (filtro) do site
     #Regra: Tem que haver pelo menos um item na lista
+    @Testes-Consultar
     Scenario Outline: Filtrando a lista do banco de dados, para que ela mostre apenas os itens com valores compatíveis aos valores escolhidos
     Given dentro do site
     And que exista pelo menos um item na lista
@@ -85,6 +90,7 @@ Feature: CRUD Plus
 
     #Regra: É preciso que o usuario possa usar a ferramenta (filtro) do site
     #Regra: Tem que haver pelo menos um item na lista
+    @Testes-Consultar
     Scenario: Filtrando a lista do banco de dados por categorias, para que ela mostre apenas itens compativeis com as categorias escolhidas
     Given dentro do site
     When clico no menu filtro de exibiçao
@@ -95,6 +101,7 @@ Feature: CRUD Plus
 
    #Regra: É preciso que o usuario possa usar a ferramenta (Show Warning) do site
    #Regra: É preciso que o usuario possa usar a ferramenta (Show Info) do site
+   @Testes-Consultar
    Scenario: Marcando itens que possuem tags de Warning ou Info
    Given dentro do site
    When clico em Show Warning
@@ -108,6 +115,7 @@ Feature: CRUD Plus
    #Regra: Tem que haver pelo menos um item na tabela
    #Regra: Todo item adicionado tem que ter uma descrição
    #Regra: Validação do item modificado na tabela
+   @Testes-Atualizar
    Scenario Outline: Editando um item da lista do banco de dados e alterando os valores do nome, preço, país, moeda e a data
    Given dentro do site
    And que exista pelo menos um item na lista
@@ -128,6 +136,7 @@ Feature: CRUD Plus
    #Regra: É possivel selecionar todos os itens da tabela
    #Regra: É possivel excluir apenas os itens selecionados
    #Regra: O índice de itens passiveis de exclusão começa a partir de 1
+   @Testes-Deletar
    Scenario Outline: Excluir uma linha da lista de itens do banco de dados
    Given dentro do site
    And que exista pelo menos um item na lista
@@ -144,6 +153,7 @@ Feature: CRUD Plus
    #Regra: É possivel excluir todos os itens da tabela
    #Regra: É possivel selecionar todos os itens da tabela
    #Regra: Validação do item excluido na tabela
+   @Testes-Deletar
    Scenario Outline: Excluindo todos os itens da lista que usem a moeda EUR, usando o filtro de pesquisa
    Given dentro do site
    And que exista um item na lista com o tipo de moeda "<moeda>"
@@ -162,6 +172,7 @@ Feature: CRUD Plus
    #Regra: Tem que haver pelo menos um item sendo criado
    #Regra: Tem que haver pelo menos um item selecionado
    #Regra: É possivel excluir qualquer item da tabela
+   @Testes-Deletar
    Scenario: Excluir uma item que esta sendo adicionado na lista, usando o icone da lixeira
    Given dentro do site
    And clico no botão Add
@@ -170,17 +181,18 @@ Feature: CRUD Plus
 
 
 
-    #Regra: É preciso que o usuario possa alterar a região do site
-    #Regra: É nescessario uma validação para ver se o idioma foi realmente alterado
-    Scenario Outline: Alterando a linguagem do site 
-    Given dentro do site
-    When escolho um idioma "<idioma>"
-    Then verifico se o idioma "<apresentacao>" foi alterado
-    Examples:
-        | idioma        | apresentacao         |
-        | English (GB)  | Region: English (GB) |
-        | English (US)  | Region: English (US) |
-        | Finnish (FI)  | Region: Finnish (FI) |
-        | Swedish (SV)  | Region: Swedish (SV) |
-        | Spanish (ES)  | Region: Spanish (ES) |
-        | German (DE)   | Region: German (DE)  |
+   #Regra: É preciso que o usuario possa alterar a região do site
+   #Regra: É nescessario uma validação para ver se o idioma foi realmente alterado
+   @Testes-Idioma
+   Scenario Outline: Alterando a linguagem do site 
+   Given dentro do site
+   When escolho um idioma "<idioma>"
+   Then verifico se o idioma "<apresentacao>" foi alterado
+   Examples:
+       | idioma        | apresentacao         |
+       | English (GB)  | Region: English (GB) |
+       | English (US)  | Region: English (US) |
+       | Finnish (FI)  | Region: Finnish (FI) |
+       | Swedish (SV)  | Region: Swedish (SV) |
+       | Spanish (ES)  | Region: Spanish (ES) |
+       | German (DE)   | Region: German (DE)  |
