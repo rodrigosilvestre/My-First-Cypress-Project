@@ -30,7 +30,7 @@ Feature: CRUD Plus
    #Regra: É nescessario que o item adicionado tenha um nome
    #Regra: É nescessario que o item adicionado tenha um valor
    #Regra: Validação do item adicionado na tabela
-   @Testes-Adicionar @Testes-Remover
+   @Testes-Adicionar @Testes-Adicionar-Deletar
    Scenario Outline: Adicionando um elemento na lista, e logo após remover o elemento adicionado da lista
    Given dentro do site
    And clico no botão Add
@@ -172,7 +172,7 @@ Feature: CRUD Plus
    #Regra: Tem que haver pelo menos um item sendo criado
    #Regra: Tem que haver pelo menos um item selecionado
    #Regra: É possivel excluir qualquer item da tabela
-   @Testes-Deletar
+   @Testes-Deletar @Testes-Adicionar-Deletar
    Scenario: Excluir uma item que esta sendo adicionado na lista, usando o icone da lixeira
    Given dentro do site
    And clico no botão Add
