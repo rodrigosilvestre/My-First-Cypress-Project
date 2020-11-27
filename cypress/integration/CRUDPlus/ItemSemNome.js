@@ -5,4 +5,5 @@ When('é requisitada a inserção das descrições preco {string} do item', (pre
 Then('validar se a mensagem de error apareceu em cima do campo de nome', () => {
     cy.get('[id="ocDatagridCell-TestGrid-name-0"]').trigger('mouseover');
     cy.findByText("Value is required");
+    cy.screenshot();
 });
