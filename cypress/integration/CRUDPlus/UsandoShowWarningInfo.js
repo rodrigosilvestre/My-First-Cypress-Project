@@ -8,5 +8,4 @@ When('clico em Show Info', () => {
 
 Then('posso ver quais itens estão marcados', () => {
 	cy.screenshot();
-	return true;
 });

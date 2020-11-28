@@ -4,8 +4,7 @@ Feature: explorando falhas
    DESEJO inspecionar o site a procura de falhas
    PARA que eu possa ver quais são as falhas do sistema
 
-   #Regra: É possivel adicionar itens na tabela
-
+   #Regra: Deve ser possivel adicionar itens na tabela
    Scenario Outline: Testando se a lista aceita numeros no lugar do nome do item, dentro da funcionalidade adicionar
    Given dentro do site
    And clico no botão Add
@@ -17,6 +16,7 @@ Feature: explorando falhas
        | nome | preco |
        | 1231 | 2     |
 
+   #Regra: Deve ser possivel adicionar itens na tabela 
    Scenario Outline: Testando se a lista aceita letras no lugar do preço do item, dentro da funcionalidade adicionar
    Given dentro do site
    And clico no botão Add
@@ -28,6 +28,7 @@ Feature: explorando falhas
        | nome           | preco        |
        | Lixeira (lixo) | Gamba Fedido |
 
+   #Regra: Deve ser possivel adicionar itens na tabela
    Scenario Outline: Testando se a lista aceita letras no lugar do estoque do item, dentro da funcionalidade adicionar
    Given dentro do site
    And clico no botão Add
@@ -39,6 +40,7 @@ Feature: explorando falhas
        | nome       | preco | estoque      | 
        | Pilha (PI) | 20    | Vinte e dois |
 
+   #Regra: Deve ser possivel adicionar itens na tabela
    Scenario Outline: Testando se a lista aceita datas que não existem, dentro da funcionalidade adicionar
    Given dentro do site
    And clico no botão Add
